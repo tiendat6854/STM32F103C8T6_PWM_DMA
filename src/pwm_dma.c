@@ -42,7 +42,7 @@ void pwm_dma_Init(void)
 	
 	DMA1_Channel1->CPAR = (uint32_t)(&(TIM4->CCR1));
 	
-	DMA1_Channel1->CNDTR = 6;
+	DMA1_Channel1->CNDTR = sizeof(u16Buffer);
 	
 	DMA1_Channel1->CCR |= (1 << 0);
 	
